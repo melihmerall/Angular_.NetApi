@@ -1,4 +1,5 @@
-
+using System.Collections.Immutable;
+using Core.Abtracts;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 //DbCotext - Sqlite
 builder.Services.AddDbContext<TradeContext>(opt => {
