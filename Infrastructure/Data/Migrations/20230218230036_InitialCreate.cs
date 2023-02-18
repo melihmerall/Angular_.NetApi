@@ -21,7 +21,6 @@ namespace Infrastructure.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ProductBrands", x => x.Id);
-                    
                 });
 
             migrationBuilder.CreateTable(
